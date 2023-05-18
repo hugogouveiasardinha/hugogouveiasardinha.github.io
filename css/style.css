@@ -3,7 +3,7 @@
     src: url(../css/fonts/DM_Sans/DMSans-Regular.ttf);
 }
 
-html{
+html {
     font-family: DM, sans-serif;
     --yellow: #FAB102;
     --blue: #05228B;
@@ -11,85 +11,37 @@ html{
     --white: #FFFFFF;
 }
 
-body{overflow-y: hidden;}
-.container{
+body {
+    overflow-y: hidden;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    
+
 }
 
-.header{width: 100%;
+/***********/
+/* HEADER */
+/*********/
+.header {
+    width: 100%;
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;}
-
-.container__horizontal{
-    display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
 }
-.container__left{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo{
-    width: 100%;
-}
-
-.social-media-bar{
-    width: 7%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-right: 2%;
-    column-gap: 5px;
-}
-
-.social-media__icons{
-    width: 25px;  
-}
-
-.footer-left{
-    position: fixed;
-    bottom: 0;
-    text-shadow: 2px 0px 4px var(--yellow);
-    color: var(--blue);
-}
-.container__right{
-    width: 50%;
-    height: 100vh;
-    overflow-y: scroll;
-    
-}
-
-.container__right-title{
-    color: var(--yellow);
-    font-size: 3em;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    text-align: center;
-    
-}
-
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    margin-left:5%;
- 
+    margin-left: 5%;
+
 }
 
 .navbar__item {
@@ -103,11 +55,154 @@ body{overflow-y: hidden;}
     letter-spacing: 0.1rem;
     font-weight: bold;
     color: var(--blue);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+
 }
 
-.navbar__item:hover{
+.navbar__item:hover {
     text-decoration: underline;
+    transform: scale(1.2);
+
+
+
+}
+.social-media-bar {
+    width: 7%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 2%;
+    column-gap: 5px;
+}
+
+.social-media__icons {
+    width: 25px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.social-media__icons:hover {
+    transform: scale(1.2);
+}
+/**************/
+/* MAIN LEFT */
+/************/
+.container__horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.container__left {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__left-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    margin-top: 20%;
+}
+
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.footer-left{
+    margin-top: 10%;
     
+}   
+
+.footer-left-link{
+    text-shadow: 2px 0px 4px var(--yellow);
+    color: var(--blue);
+    font-size: 1rem;
+    text-shadow: #000 1px 0 10px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+
+}
+
+.footer-left-link:hover {
+    transform: scale(1.2);
+}
+
+/***************/
+/* MAIN RIGHT */
+/***************/
+
+.container__right {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: var(--yellow);
+
+}
+/*
+.container__right-title {
+    color: var(--yellow);
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: center;
+
+}
+*/
+
+.introduction{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
-    
+}
+
+.introduction__photo{
+width: 30%;
+margin-top: 27%;
+
+border-radius: 50%;
+transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.introduction__photo:hover {
+    transform: scale(1.2);
+}
+
+
+
+.introduction__title{
+    margin: 2% 0;
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4;
+}
+
+.introduction__text{
+    width: 70%;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: var(--yellow);
+
+    background-color: var(--blue);
+    padding: 2% 5%;
+    border-radius: 10px;
 }
